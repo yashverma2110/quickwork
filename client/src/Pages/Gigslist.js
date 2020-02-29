@@ -12,7 +12,7 @@ class Gigs extends Component {
   }
   componentDidMount() {
     axios
-      .get("//localhost:3000/gig/viewall")
+      .get("/gig/viewall")
       .then(res => {
         this.setState({ gigs: res.data });
       })

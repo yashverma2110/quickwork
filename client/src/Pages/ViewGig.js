@@ -12,7 +12,7 @@ class ViewGig extends React.Component {
     let hash = this.props.location.hash;
     let gigID = hash.split("#")[1];
     axios
-      .get("//localhost:3000/gig/view/" + gigID)
+      .get("/gig/view/" + gigID)
       .then(res => {
         this.setState({ gig: res.data });
       })
