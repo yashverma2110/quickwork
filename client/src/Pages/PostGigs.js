@@ -37,7 +37,7 @@ class PostGig extends React.Component {
 
     let userId = localStorage.getItem("userID");
     axios
-      .post("/gigs/post", {
+      .post("/gig/post", {
         title,
         desc,
         offer,
