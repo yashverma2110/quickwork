@@ -9,7 +9,7 @@ function Login(props) {
     e.preventDefault();
     axios.post("/user/login", { email, password }).then(res => {
       localStorage.setItem("token", res.data.token);
-      localStorage.setItem("userID", res.data.userID);
+      localStorage.setItem("userID", res.data.user._id);
       props.history.push("/gigs");
     });
   };
