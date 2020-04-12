@@ -4,7 +4,7 @@ const User = require("../models/user");
 const router = new express.Router();
 
 router.post("/gig/post", async (req, res) => {
-  const user = await User.findByEmail(req.body.email);
+  const user = await User.findById(req.body.userId);
   delete req.body.email;
   const gig = new Gig({ ...req.body, owner: user });
   try {

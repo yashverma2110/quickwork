@@ -7,9 +7,9 @@ function Login(props) {
   const [password, setPass] = useState("");
   const handleLogin = e => {
     e.preventDefault();
-    axios.post("//localhost:3000/user/login", { email, password }).then(res => {
+    axios.post("/user/login", { email, password }).then(res => {
       localStorage.setItem("token", res.data.token);
-      localStorage.setItem("userID", res.data.userID);
+      localStorage.setItem("userID", res.data.user._id);
       props.history.push("/gigs");
     });
   };

@@ -14,7 +14,7 @@ class Acceptgig extends React.Component {
     let gigID = hash.split("#")[1];
     console.log(gigID);
     axios
-      .get("//localhost:3000/gig/accept/" + gigID)
+      .get("/gig/accept/" + gigID)
       .then(res => {
         this.setState({ gig: res.data });
       })

@@ -5,7 +5,7 @@ export default class Logout extends React.Component {
   componentDidMount() {
     axios
       .request({
-        url: "//localhost:3000/user/logout",
+        url: "/user/logout",
         method: "post",
         headers: { Authorization: "Bearer " + localStorage.getItem("token") }
       })
